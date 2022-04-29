@@ -46,11 +46,11 @@ public class InitDatabase {
 //-----------------------------------
         Random r = new Random();
         List<User> users = List.of(new User[]{
-                User.builder().name("Nolan").accountName("@nolan").email("nolan@gmail.com").password(encoder.encode("123")).countPublications(0).countSubscribers(0).countSubscribes(0).build(),
-                User.builder().name("Jonatan").accountName("@Jonatan").email("Jonatan@mail.com").password(encoder.encode("123")).countPublications(0).countSubscribers(0).countSubscribes(0).build(),
-                User.builder().name("Cooper").accountName("@Cooper").email("Cooper@mail.com").password(encoder.encode("123")).countPublications(0).countSubscribers(0).countSubscribes(0).build(),
-                User.builder().name("godfather").accountName("@godfather").email("godfather@mail.com").password(encoder.encode("123")).countPublications(0).countSubscribers(0).countSubscribes(0).build(),
-                User.builder().name("Abdur").accountName("@abdy").email("abdur@mail.com").password(encoder.encode("123")).countPublications(0).countSubscribers(0).countSubscribes(0).build(),
+                User.builder().name("Nolan").accountName("nolan").email("nolan@gmail.com").password(encoder.encode("123")).countPublications(0).countSubscribers(0).countSubscribes(0).build(),
+                User.builder().name("Jonatan").accountName("Jonatan").email("Jonatan@mail.com").password(encoder.encode("123")).countPublications(0).countSubscribers(0).countSubscribes(0).build(),
+                User.builder().name("Cooper").accountName("Cooper").email("Cooper@mail.com").password(encoder.encode("123")).countPublications(0).countSubscribers(0).countSubscribes(0).build(),
+                User.builder().name("godfather").accountName("godfather").email("godfather@mail.com").password(encoder.encode("123")).countPublications(0).countSubscribers(0).countSubscribes(0).build(),
+                User.builder().name("Abdur").accountName("abdy").email("abdur@mail.com").password(encoder.encode("123")).countPublications(0).countSubscribers(0).countSubscribes(0).build(),
         });
 
 //-----------------------------------

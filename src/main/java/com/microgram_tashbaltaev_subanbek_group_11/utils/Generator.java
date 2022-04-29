@@ -67,7 +67,7 @@ public final class Generator {
         var prefix = removeExtra.matcher(makeGibberish(6,0)).replaceAll("").toLowerCase();
         var suffix = removeExtra.matcher(makeGibberish(2,0)).replaceAll("").toLowerCase();
         var ext = removeExtra.matcher(makeGibberish(2,0)).replaceAll("").toLowerCase();
-        var email = String.format("%s@%s.%s", prefix, suffix, ext);
+        var email = String.format("%s%s.%s", prefix, suffix, ext);
         return email.replace(" ", "");
     }
 

@@ -22,16 +22,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers("/users/**")
+                .antMatchers("/users/registration", "/users/search")
                 .permitAll();
 
         http.authorizeRequests()
                 .antMatchers("/images/**")
                 .permitAll();
 
-//        http.authorizeRequests()
-//                .antMatchers("/swagger-ui/**")
-//                .permitAll();
+        http.authorizeRequests()
+                .antMatchers("/users/login")
+                .fullyAuthenticated();
 
         http.authorizeRequests()
                 .anyRequest()
@@ -45,6 +45,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.formLogin().disable().logout().disable();
 
         http.csrf().disable();
-
+        http.cors().disable();
     }
 }

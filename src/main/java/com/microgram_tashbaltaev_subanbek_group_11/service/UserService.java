@@ -71,6 +71,10 @@ public class UserService implements UserDetailsService {
         }
     }
 
+    public Optional<User> userSearch(String text){
+        return usersRepository.findByEmail(text);
+    }
+
     public ResponseEntity<UserPublicProfileDTO> getUser(Long userId) {
         Optional<User> optUser = usersRepository.findById(userId);
         if (optUser.isEmpty()) {
